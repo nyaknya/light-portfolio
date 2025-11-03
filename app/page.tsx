@@ -91,6 +91,7 @@ export default function Home() {
 
   return (
     <>
+    <Header isDark={isOn}/>
       <main>
         <section className="w-full h-screen flex justify-center items-center">
           <div className="w-[1440px] h-[680px] m-auto flex flex-col justify-between items-center">
@@ -142,6 +143,9 @@ export default function Home() {
               </span>
             </div>
           </div>
+        </section>
+        <section className="w-full py-40">
+          <div className="w-[1440px] h-[680px] m-auto"></div>
         </section>
       </main>
       <footer></footer>

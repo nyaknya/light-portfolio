@@ -25,3 +25,13 @@ body {
   letter-spacing: -0.05em;
   font-family: var(--font-work-sans), var(--font-noto-sans), sans-serif;
 }
+
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}

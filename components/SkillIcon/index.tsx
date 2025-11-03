@@ -10,7 +10,10 @@ interface SkillIconProps {
 
 export default function SkillIcon({ name, src, isFill, width, height }: SkillIconProps) {
   return (
-    <li className="w-20 h-20 rounded-2xl shadow-xl flex justify-center items-center">
+    <li 
+      className={`w-20 h-20 ${isFill ? 'rounded-2xl' : 'rounded-xl'} shadow-xl flex justify-center items-center`}
+      style={!isFill ? { backgroundColor: 'var(--skill-bg)' } : {}}
+    >
       <Image
         src={src}
         alt={name}

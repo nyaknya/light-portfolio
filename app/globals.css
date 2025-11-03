@@ -3,11 +3,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --blur-bg: #F3F5F7;
+  --toggle-bg: #e5e7eb;
+    --skill-bg: #ffffff;
+}
+
+:root.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --blur-bg: #1a1a1a;
+  --toggle-bg: #374151;
+    --skill-bg: #3a3a3a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-blur-bg: var(--blur-bg);
   --font-work: var(--font-work-sans);
   --font-noto: var(--font-noto-sans);
 }
@@ -24,8 +36,8 @@ body {
   color: var(--foreground);
   letter-spacing: -0.05em;
   font-family: var(--font-work-sans), var(--font-noto-sans), sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
-
 
 @keyframes blink {
   0%, 50% { opacity: 1; }

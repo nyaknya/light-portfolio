@@ -94,7 +94,7 @@ export default function IntroduceSection() {
           </div>
         </div>
         <div className="mt-10">
-          <h3 className="font-bold text-2xl mb-8">이력</h3>
+          <h3 className="font-bold text-3xl mb-8">이력</h3>
           <div className="grid grid-cols-12">
             <div className="col-span-4">
               <ul className="pl-5 border-l-2 border-gray-300">

@@ -3,6 +3,7 @@
 import Header from "@/components/header";
 import IntroduceSection from "@/components/IntroduceSection";
 import MainVisual from "@/components/MainVisual";
+import SkillsSection from "@/components/SkillsSection";
 import Lenis from "lenis";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -37,6 +38,7 @@ export default function Home() {
       <main>
         <MainVisual isOn={isOn} toggleDark={() => setIsOn(!isOn)} />
         <IntroduceSection />
+        <SkillsSection />
       </main>
       <footer></footer>
     </>

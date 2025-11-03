@@ -25,7 +25,7 @@ export default function FallText({ text, className = "" }: FallTextProps) {
   return (
     <h2 ref={titleRef} className={className}>
       {letters.map((letter, i) => (
-        <span key={i} className="inline-block">
+        <span key={i} className="inline-block tracking-tighter">
           {letter}
         </span>
       ))}

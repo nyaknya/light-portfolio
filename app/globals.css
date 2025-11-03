@@ -3,9 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --blur-bg: #F3F5F7;
+  --blur-bg: #f3f5f7;
   --toggle-bg: #e5e7eb;
-    --skill-bg: #ffffff;
+  --skill-bg: #ffffff;
+  --progress-bar: #000000;
 }
 
 :root.dark {
@@ -13,7 +14,8 @@
   --foreground: #ededed;
   --blur-bg: #1a1a1a;
   --toggle-bg: #374151;
-    --skill-bg: #3a3a3a;
+  --skill-bg: #3a3a3a;
+  --progress-bar: #ffffff;
 }
 
 @theme inline {
@@ -40,8 +42,14 @@ body {
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .animate-blink {

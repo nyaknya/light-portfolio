@@ -37,8 +37,11 @@ export default function Header({ isDark, onToggle }: HeaderProps) {
       style={{ backgroundColor: "var(--background)" }}
     >
       <span
-        className="bg-black dark:bg-white block h-1 transition-all duration-300"
-        style={{ width: `${scrollProgress}%` }}
+        className="block h-1 transition-all duration-300"
+        style={{
+          width: `${scrollProgress}%`,
+          backgroundColor: "var(--progress-bar)",
+        }}
         aria-hidden
       />
       <div className="w-[1440px] m-auto py-3 flex justify-between items-center">

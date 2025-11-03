@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function SkillsSection() {
   return (
-    <section className="w-full py-40">
-      <div className="w-[1440px] h-[680px] m-auto">
+    <section className="w-full py-20">
+      <div className="w-[1440px] m-auto">
         <h3 className="font-bold text-3xl mb-6">Prontend Skills</h3>
         <div className="flex justify-between gap-10">
           <div className="">
@@ -59,7 +59,7 @@ export default function SkillsSection() {
             <h4 className="text-2xl font-bold mb-4">사용해본 경험이 있어요</h4>
             <ul className="grid grid-cols-4 gap-5">
               <li className="col-span-2 flex items-center gap-5">
-                <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
+                <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex overflow-hidden">
                   <Image
                     src="/img/stylecomponent-icon.png"
                     width={50}
@@ -67,7 +67,7 @@ export default function SkillsSection() {
                     alt="스타일 컴포넌트"
                   />
                 </figure>
-                <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex -ml-10 bg-white">
+                <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex -ml-10">
                   <Image
                     src="/img/scss-icon.png"
                     width={48}
@@ -75,7 +75,7 @@ export default function SkillsSection() {
                     alt="scss"
                   />
                 </figure>
-                <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex -ml-10 bg-white">
+                <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex -ml-10">
                   <Image
                     src="/img/tailwind-icon.png"
                     width={44}

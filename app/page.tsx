@@ -1,5 +1,6 @@
 "use client";
 
+import ContactSection from "@/components/ContactSection";
 import DesignProject from "@/components/DesignProject";
 import DevProject from "@/components/DevProject";
 import Header from "@/components/header";
@@ -42,6 +43,7 @@ export default function Home() {
         <SkillsSection />
         <DevProject />
         <DesignProject />
+        <ContactSection />
       </main>
       <footer></footer>
     </>

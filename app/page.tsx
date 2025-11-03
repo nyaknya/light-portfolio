@@ -1,5 +1,6 @@
 "use client";
 
+import DevProject from "@/components/DevProject";
 import Header from "@/components/header";
 import IntroduceSection from "@/components/IntroduceSection";
 import MainVisual from "@/components/MainVisual";
@@ -39,6 +40,7 @@ export default function Home() {
         <MainVisual isOn={isOn} toggleDark={() => setIsOn(!isOn)} />
         <IntroduceSection />
         <SkillsSection />
+        <DevProject />
       </main>
       <footer></footer>
     </>

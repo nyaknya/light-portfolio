@@ -189,17 +189,16 @@ export default function IntroduceSection() {
                 <li className=" relative">
                   <span className="absolute -left-[25px] top-3 w-2 h-2 bg-gray-300 dark:bg-gray-500 rounded-full" />
                   <h4 className="text-2xl font-semibold pb-2">
-                  2025.05~
+                    2025.05~
                     <span className="text-base text-gray-400 inline-block pl-2">
                       6개월
                     </span>
                   </h4>
                   <p className="text-lg leading-8">
-                    <strong className="block">
-                      인터와이즈
-                    </strong>
-웹 퍼블리셔 및 웹 디자이너<br />
-그누보드 기반, 다양한 업종의 웹사이트 및 랜딩페이지 제작
+                    <strong className="block">인터와이즈</strong>
+                    웹 퍼블리셔 및 웹 디자이너
+                    <br />
+                    그누보드 기반, 다양한 업종의 웹사이트 및 랜딩페이지 제작
                   </p>
                 </li>
               </ul>

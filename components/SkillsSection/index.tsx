@@ -166,7 +166,7 @@ export default function SkillsSection() {
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-12 mt-10">
+        <div className="grid grid-cols-12 mt-12">
           <div className="col-span-6">
             <h3 className="font-bold text-3xl mb-6">Design Skills</h3>
             <ul className="grid grid-cols-6 gap-5">

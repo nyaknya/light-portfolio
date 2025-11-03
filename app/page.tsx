@@ -1,12 +1,12 @@
 "use client";
 
+import DesignProject from "@/components/DesignProject";
 import DevProject from "@/components/DevProject";
 import Header from "@/components/header";
 import IntroduceSection from "@/components/IntroduceSection";
 import MainVisual from "@/components/MainVisual";
 import SkillsSection from "@/components/SkillsSection";
 import Lenis from "lenis";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -41,6 +41,7 @@ export default function Home() {
         <IntroduceSection />
         <SkillsSection />
         <DevProject />
+        <DesignProject />
       </main>
       <footer></footer>
     </>

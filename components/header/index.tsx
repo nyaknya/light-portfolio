@@ -56,10 +56,12 @@ export default function Header({ isDark, onToggle }: HeaderProps) {
               />
             </Link>
           </h1>
-          <Toggle isOn={isDark} onChange={onToggle} />
         </div>
         <nav>
           <ul className="flex items-center gap-10 dark:text-white">
+            <li className="mt-2">
+              <Toggle isOn={isDark} onChange={onToggle} />
+            </li>
             <li>
               <Link href="#introduce">About</Link>
             </li>

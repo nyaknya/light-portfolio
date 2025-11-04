@@ -112,7 +112,7 @@ export default function SkillsSection() {
 
   return (
     <section className="w-full py-20">
-      <div className="w-[1440px] m-auto">
+     <div className="w-full max-w-[1440px] m-auto px-5">
         <h3 ref={frontendTitleRef} className="font-bold text-3xl mb-6">
           Prontend Skills
         </h3>

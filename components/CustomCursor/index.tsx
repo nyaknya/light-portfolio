@@ -63,12 +63,12 @@ export default function CustomCursor() {
     <>
       <div
         ref={cursorRef}
-        className="custom-cursor fixed w-12 h-12 border-2 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
+        className="custom-cursor fixed w-12 h-12 border-2 rounded-full pointer-events-none z-9999 -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
         style={{ borderColor: 'var(--color-text)' }}
       />
       <div
         ref={cursorDotRef}
-        className="custom-cursor-dot fixed w-3 h-3 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
+        className="custom-cursor-dot fixed w-3 h-3 rounded-full pointer-events-none z-9999 -translate-x-1/2 -translate-y-1/2"
         style={{ backgroundColor: 'var(--color-text)' }}
       />
     </>

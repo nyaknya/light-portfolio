@@ -4,8 +4,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 
-
-
 export default function ContactSection() {
   const skills = [
     {
@@ -77,9 +75,12 @@ export default function ContactSection() {
   const skillsRef = useRef<HTMLUListElement>(null);
 
   return (
-    <section className="w-full h-screen flex justify-center items-center" id="contact">
-      <div className="w-[1440px] h-[560px] m-auto flex flex-col justify-between items-center">
-                <div className="flex justify-center w-full items-center">
+    <section
+      className="w-full h-screen flex justify-center items-center"
+      id="contact"
+    >
+      <div className="w-full max-w-[1440px] h-[560px] m-auto flex flex-col justify-between items-center">
+        <div className="flex justify-center w-full items-center">
           <ul ref={skillsRef} className="flex self-center gap-5">
             {skills.map(({ src, alt, isFill, width, height }) => (
               <SkillIcon
@@ -95,7 +96,10 @@ export default function ContactSection() {
         </div>
 
         <div className="relative w-full">
-          <FallText text="감사합니다!" className="text-8xl font-medium text-center" />
+          <FallText
+            text="감사합니다!"
+            className="text-8xl font-medium text-center"
+          />
           <span
             className="font-sans text-[240px] font-bold absolute right-1/2 bottom-1/2 translate-1/2 -z-10 blur-sm w-full text-center"
             style={{ color: "var(--blur-bg)" }}
@@ -106,8 +110,11 @@ export default function ContactSection() {
         <div className="flex justify-center items-start gap-4 w-full text-lg">
           <strong>CONTACT</strong>
           <div>
-            010-8582-0835 / sim784442@gmail.com<br />
-            <Link href="https://github.com/nyaknya" target="_blank">https://github.com/nyaknya</Link>
+            010-8582-0835 / sim784442@gmail.com
+            <br />
+            <Link href="https://github.com/nyaknya" target="_blank">
+              https://github.com/nyaknya
+            </Link>
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ export default function DevProject() {
 
   return (
     <section className="w-full py-20" id="project">
-      <div className="w-[1440px] m-auto">
+      <div className="w-full max-w-[1440px] m-auto px-5">
         <div className="flex justify-between items-center py-8">
           <h2 ref={titleRef} className="text-5xl font-bold">
             Dev Projects

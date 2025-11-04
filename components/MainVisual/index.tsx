@@ -83,7 +83,7 @@ export default function MainVisual({ isOn, toggleDark }: MainVisualProps) {
 
   return (
     <section className="w-full h-screen flex justify-center items-center">
-      <div className="w-[1440px] h-[680px] m-auto flex flex-col justify-between items-center">
+      <div className="w-full max-w-[1440px] h-[680px] m-auto flex flex-col justify-between items-center px-5">
         <div className="flex justify-between items-center w-full">
           <Image
             src={isOn ? "/img/logo-dark.png" : "/img/logo.png"}

@@ -100,7 +100,7 @@ export default function DesignProject() {
 
   return (
     <section className="w-full py-20">
-      <div className="w-[1440px] m-auto">
+      <div className="w-full max-w-[1440px] m-auto px-5">
         <div className="flex justify-between items-center py-8 mb-4">
           <h2 ref={titleRef} className="text-5xl font-bold">
             Design Works

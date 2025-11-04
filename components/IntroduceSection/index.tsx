@@ -148,7 +148,7 @@ export default function IntroduceSection() {
 
   return (
     <section className="w-full py-20" id="introduce">
-      <div className="w-[1440px] m-auto">
+     <div className="w-full max-w-[1440px] m-auto px-5">
         <h2 className="text-5xl font-bold mb-8">introduce Me</h2>
         <div className="flex gap-10">
           <div ref={imageRef}>

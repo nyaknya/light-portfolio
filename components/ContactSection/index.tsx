@@ -1,8 +1,5 @@
-import Image from "next/image";
 import FallText from "../FallText";
 import SkillIcon from "../SkillIcon";
-import Toggle from "../Toggle";
-import TypeText from "../TypeText";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";

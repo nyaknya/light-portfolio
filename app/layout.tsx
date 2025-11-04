@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR, Work_Sans} from "next/font/google";
+import { Noto_Sans_KR, Work_Sans } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -12,7 +13,8 @@ const notoSansKr = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   title: "심은주 포트폴리오",
-  description: "만나서 반갑습니다! 만능 엔터테이너 심은주의 포트폴리오 사이트입니다.",
+  description:
+    "만나서 반갑습니다! 만능 엔터테이너 심은주의 포트폴리오 사이트입니다.",
 };
 
 export default function RootLayout({
@@ -25,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${workSans.variable} ${notoSansKr.variable} antialiased`}
       >
+        <CustomCursor />
         {children}
       </body>
     </html>

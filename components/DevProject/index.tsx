@@ -14,7 +14,6 @@ export default function DevProject() {
   const projectItemsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
-    // 타이틀 애니메이션
     gsap.from(titleRef.current, {
       y: 40,
       opacity: 0,
@@ -28,7 +27,6 @@ export default function DevProject() {
       },
     });
 
-    // 서브타이틀 애니메이션
     gsap.from(subtitleRef.current, {
       y: 40,
       opacity: 0,
@@ -43,7 +41,6 @@ export default function DevProject() {
       },
     });
 
-    // 프로젝트 아이템 순차 애니메이션
     projectItemsRef.current.forEach((item, index) => {
       if (item) {
         gsap.from(item, {
@@ -451,7 +448,7 @@ export default function DevProject() {
               </p>
               <ul className="flex gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
-                  카페24 쇼핑몰 커스텀
+                  하드코딩
                 </li>
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 font-semibold">
                   HTML/CSS/JS

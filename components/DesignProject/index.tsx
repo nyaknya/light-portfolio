@@ -212,7 +212,7 @@ export default function DesignProject() {
             }}
             className="col-span-1 relative"
           >
-            <Link href={"/img/insta_01.png"} target="_blank">
+            <Link href={"/img/insta_01.jpg"} target="_blank">
               <span className="absolute right-8 bottom-4 text-white">
                 인스타 배너
               </span>{" "}
@@ -230,7 +230,7 @@ export default function DesignProject() {
             }}
             className="col-span-1 relative"
           >
-            <Link href={"/img/insta_02.png"} target="_blank">
+            <Link href={"/img/insta_02.jpg"} target="_blank">
               <span className="absolute right-8 bottom-4 text-white">
                 인스타 배너
               </span>{" "}

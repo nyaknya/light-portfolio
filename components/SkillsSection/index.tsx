@@ -1,12 +1,129 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function SkillsSection() {
+  const frontendTitleRef = useRef(null);
+  const skillCardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const designTitleRef = useRef(null);
+  const designItemsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const anotherTitleRef = useRef(null);
+  const anotherItemsRef = useRef<(HTMLLIElement | null)[]>([]);
+
+  useEffect(() => {
+    // 프론트엔드 타이틀
+    gsap.from(frontendTitleRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: frontendTitleRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // 스킬 카드들 순차 애니메이션
+    skillCardsRef.current.forEach((card, index) => {
+      if (card) {
+        gsap.from(card, {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          delay: index * 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+    });
+
+    // 디자인 타이틀
+    gsap.from(designTitleRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: designTitleRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // 디자인 아이템들
+    designItemsRef.current.forEach((item, index) => {
+      if (item) {
+        gsap.from(item, {
+          x: -30,
+          opacity: 0,
+          duration: 0.6,
+          delay: index * 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+    });
+
+    // Another 타이틀
+    gsap.from(anotherTitleRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: anotherTitleRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // Another 아이템들
+    anotherItemsRef.current.forEach((item, index) => {
+      if (item) {
+        gsap.from(item, {
+          x: -30,
+          opacity: 0,
+          duration: 0.6,
+          delay: index * 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+    });
+  }, []);
+
   return (
     <section className="w-full py-20">
       <div className="w-[1440px] m-auto">
-        <h3 className="font-bold text-3xl mb-6">Prontend Skills</h3>
+        <h3 ref={frontendTitleRef} className="font-bold text-3xl mb-6">
+          Prontend Skills
+        </h3>
         <div className="flex justify-between gap-10">
-          <div className="">
+          <div ref={(el) => { skillCardsRef.current[0] = el; }}>
             <h4 className="text-2xl font-bold mb-4">자주 사용해봤어요</h4>
             <ul className="grid grid-cols-4 gap-5">
               <li className="col-span-2 flex items-center gap-5">
@@ -55,7 +172,7 @@ export default function SkillsSection() {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div ref={(el) => { skillCardsRef.current[1] = el; }}>
             <h4 className="text-2xl font-bold mb-4">사용해본 경험이 있어요</h4>
             <ul className="grid grid-cols-4 gap-5">
               <li className="col-span-2 flex items-center gap-5">
@@ -138,7 +255,7 @@ export default function SkillsSection() {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div ref={(el) => { skillCardsRef.current[2] = el; }}>
             <h4 className="text-2xl font-bold mb-4">앞으로 배워보고 싶어요</h4>
             <ul className="grid grid-cols-2 gap-5">
               <li className="col-span-3 flex items-center gap-5">
@@ -168,9 +285,14 @@ export default function SkillsSection() {
         </div>
         <div className="grid grid-cols-12 mt-12">
           <div className="col-span-6">
-            <h3 className="font-bold text-3xl mb-6">Design Skills</h3>
+            <h3 ref={designTitleRef} className="font-bold text-3xl mb-6">
+              Design Skills
+            </h3>
             <ul className="grid grid-cols-6 gap-5">
-              <li className="col-span-2 flex items-center gap-5">
+              <li
+                ref={(el) => { designItemsRef.current[0] = el; }}
+                className="col-span-2 flex items-center gap-5"
+              >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/ps-icon.png"
@@ -181,7 +303,10 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">PhotoShop</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li
+                ref={(el) => { designItemsRef.current[1] = el; }}
+                className="col-span-2 flex items-center gap-5"
+              >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/ai-icon.png"
@@ -192,7 +317,10 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">Illustrator</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li
+                ref={(el) => { designItemsRef.current[2] = el; }}
+                className="col-span-2 flex items-center gap-5"
+              >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/figma-icon.png"
@@ -206,9 +334,14 @@ export default function SkillsSection() {
             </ul>
           </div>
           <div className="col-span-6">
-            <h3 className="font-bold text-3xl mb-6">Another Skills</h3>
+            <h3 ref={anotherTitleRef} className="font-bold text-3xl mb-6">
+              Another Skills
+            </h3>
             <ul className="grid grid-cols-6 gap-5">
-              <li className="col-span-2 flex items-center gap-5">
+              <li
+                ref={(el) => { anotherItemsRef.current[0] = el; }}
+                className="col-span-2 flex items-center gap-5"
+              >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/notion-icon.png"
@@ -219,7 +352,10 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">Notion</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li
+                ref={(el) => { anotherItemsRef.current[1] = el; }}
+                className="col-span-2 flex items-center gap-5"
+              >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/excel-icon.png"
@@ -230,7 +366,10 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">Excel</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li
+                ref={(el) => { anotherItemsRef.current[2] = el; }}
+                className="col-span-2 flex items-center gap-5"
+              >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/ppt-icon.png"

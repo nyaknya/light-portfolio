@@ -22,10 +22,10 @@ export default function DesignProject() {
         <ul className="grid grid-cols-3 gap-5">
           <li className="col-span-1 relative"><Link href={"/img/cosmos.pdf"} target="_blank"><span className="absolute right-8 bottom-4 text-white">PPT</span> <Image src="/img/ppt_01.png" width={460} height={260} alt="기타 디자인 예시1" /></Link></li>
           <li className="col-span-1 relative"><Link href={"/img/task.png"} target="_blank"><span className="absolute right-8 bottom-4 text-black">PPT</span> <Image src="/img/ppt_02.png" width={460} height={260} alt="기타 디자인 예시2" /></Link></li>
-          <li className="col-span-1 relative"><span className="absolute right-8 bottom-4 text-white">인스타 배너</span> <Image src="/img/ppt_03.png" width={460} height={260} alt="기타 디자인 예시3" /></li>
-          <li className="col-span-1 relative"><span className="absolute right-8 bottom-4 text-white">인스타 배너</span> <Image src="/img/ppt_04.png" width={460} height={260} alt="기타 디자인 예시4" /></li>
-          <li className="col-span-1 relative"><span className="absolute right-8 bottom-4 text-white">웹 배너</span> <Image src="/img/ppt_05.png" width={460} height={260} alt="기타 디자인 예시5" /></li>
-          <li className="col-span-1 relative"><span className="absolute right-8 bottom-4 text-white">팝업</span> <Image src="/img/ppt_06.png" width={460} height={260} alt="기타 디자인 예시6" /></li>
+          <li className="col-span-1 relative"><Link href={"/img/insta_01.png"} target="_blank"><span className="absolute right-8 bottom-4 text-white">인스타 배너</span> <Image src="/img/ppt_03.png" width={460} height={260} alt="기타 디자인 예시3" /></Link></li>
+          <li className="col-span-1 relative"><Link href={"/img/insta_02.png"} target="_blank"><span className="absolute right-8 bottom-4 text-white">인스타 배너</span> <Image src="/img/ppt_04.png" width={460} height={260} alt="기타 디자인 예시4" /></Link></li>
+          <li className="col-span-1 relative"><Link href={"/img/web.png"} target="_blank"><span className="absolute right-8 bottom-4 text-white">웹 배너</span> <Image src="/img/ppt_05.png" width={460} height={260} alt="기타 디자인 예시5" /></Link></li>
+          <li className="col-span-1 relative"><Link href={"/img/popup.png"} target="_blank"><span className="absolute right-8 bottom-4 text-white">팝업</span> <Image src="/img/ppt_06.png" width={460} height={260} alt="기타 디자인 예시6" /></Link></li>
         </ul>
       </div>
     </section>

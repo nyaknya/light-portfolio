@@ -1,19 +1,82 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function DevProject() {
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const projectItemsRef = useRef<(HTMLLIElement | null)[]>([]);
+
+  useEffect(() => {
+    // 타이틀 애니메이션
+    gsap.from(titleRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // 서브타이틀 애니메이션
+    gsap.from(subtitleRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: subtitleRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    // 프로젝트 아이템 순차 애니메이션
+    projectItemsRef.current.forEach((item, index) => {
+      if (item) {
+        gsap.from(item, {
+          y: 60,
+          opacity: 0,
+          duration: 0.8,
+          delay: index * 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+    });
+  }, []);
+
   return (
     <section className="w-full py-20" id="project">
       <div className="w-[1440px] m-auto">
         <div className="flex justify-between items-center py-8">
-          <h2 className="text-5xl font-bold">Dev Projects</h2>
-          <p className="text-2xl font-bold flex gap-1">
+          <h2 ref={titleRef} className="text-5xl font-bold">
+            Dev Projects
+          </h2>
+          <p ref={subtitleRef} className="text-2xl font-bold flex gap-1">
             지난 3년간 100개 이상의 프로젝트를 제작했습니다.{" "}
             <Link
               href={
                 "https://diamond-nerve-9e2.notion.site/44dc3f3a136a463e9a9152f4577c15e9?source=copy_link"
               }
-              className="text-[#34CDE8] flex gap-1"
+              className="text-[#34CDE8] flex gap-1 transition-all hover:opacity-70"
               target="_blank"
             >
               {" "}
@@ -28,7 +91,12 @@ export default function DevProject() {
           </p>
         </div>
         <ul className="border-t-4 border-[--color-background]">
-          <li className="p-12 border-b flex items-center gap-20">
+          <li
+            ref={(el) => {
+              projectItemsRef.current[0] = el;
+            }}
+            className="p-12 border-b flex items-center gap-20"
+          >
             <figure>
               <Image
                 src={"/img/fitmon.png"}
@@ -110,7 +178,12 @@ export default function DevProject() {
               </ul>
             </div>
           </li>
-          <li className="p-12 border-b flex items-center gap-20">
+          <li
+            ref={(el) => {
+              projectItemsRef.current[1] = el;
+            }}
+            className="p-12 border-b flex items-center gap-20"
+          >
             <figure>
               <Image
                 src={"/img/livingart.png"}
@@ -186,7 +259,12 @@ export default function DevProject() {
               </ul>
             </div>
           </li>
-          <li className="p-12 border-b flex items-center gap-20">
+          <li
+            ref={(el) => {
+              projectItemsRef.current[2] = el;
+            }}
+            className="p-12 border-b flex items-center gap-20"
+          >
             <figure>
               <Image
                 src={"/img/rainbow.png"}
@@ -263,7 +341,12 @@ export default function DevProject() {
               </ul>
             </div>
           </li>
-          <li className="p-12 border-b flex items-center gap-20">
+          <li
+            ref={(el) => {
+              projectItemsRef.current[3] = el;
+            }}
+            className="p-12 border-b flex items-center gap-20"
+          >
             <figure>
               <Image
                 src={"/img/shop.png"}
@@ -340,7 +423,12 @@ export default function DevProject() {
               </ul>
             </div>
           </li>
-          <li className="p-12 border-b flex items-center gap-20">
+          <li
+            ref={(el) => {
+              projectItemsRef.current[4] = el;
+            }}
+            className="p-12 border-b flex items-center gap-20"
+          >
             <figure>
               <Image
                 src={"/img/seahwa.png"}

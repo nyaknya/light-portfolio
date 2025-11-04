@@ -16,7 +16,6 @@ export default function SkillsSection() {
   const anotherItemsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
-    // 프론트엔드 타이틀
     gsap.from(frontendTitleRef.current, {
       y: 40,
       opacity: 0,
@@ -30,7 +29,6 @@ export default function SkillsSection() {
       },
     });
 
-    // 스킬 카드들 순차 애니메이션
     skillCardsRef.current.forEach((card, index) => {
       if (card) {
         gsap.from(card, {
@@ -49,7 +47,6 @@ export default function SkillsSection() {
       }
     });
 
-    // 디자인 타이틀
     gsap.from(designTitleRef.current, {
       y: 40,
       opacity: 0,
@@ -63,7 +60,6 @@ export default function SkillsSection() {
       },
     });
 
-    // 디자인 아이템들
     designItemsRef.current.forEach((item, index) => {
       if (item) {
         gsap.from(item, {
@@ -82,7 +78,6 @@ export default function SkillsSection() {
       }
     });
 
-    // Another 타이틀
     gsap.from(anotherTitleRef.current, {
       y: 40,
       opacity: 0,
@@ -96,7 +91,6 @@ export default function SkillsSection() {
       },
     });
 
-    // Another 아이템들
     anotherItemsRef.current.forEach((item, index) => {
       if (item) {
         gsap.from(item, {

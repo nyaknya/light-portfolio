@@ -87,7 +87,11 @@ export default function DevProject() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"https://fitmon-phi.vercel.app/"} target="_blank" className="flex gap-4 items-center">
+                  <Link
+                    href={"https://fitmon-phi.vercel.app/"}
+                    target="_blank"
+                    className="flex gap-4 items-center"
+                  >
                     <Image
                       src="/img/site_link.png"
                       alt="figma"
@@ -121,7 +125,8 @@ export default function DevProject() {
                 <strong>리빙아트</strong>
               </h3>
               <p className="text-lg leading-8">
-                스테인레스 주방용품 전문생산기업 리빙아트<br />
+                스테인레스 주방용품 전문생산기업 리빙아트
+                <br />
                 <strong>디자인 기여도 100%</strong> | 디자인 소요기간 1~2일
               </p>
               <ul className="flex gap-2">
@@ -138,9 +143,7 @@ export default function DevProject() {
               <ul className="text-xl font-bold flex gap-10">
                 <li>
                   <Link
-                    href={
-                      ""
-                    }
+                    href={"/img/livingart1.png"}
                     className="flex gap-4 items-center"
                     target="_blank"
                   >
@@ -150,7 +153,7 @@ export default function DevProject() {
                       width={24}
                       height={32}
                     />
-                    디자인 상세 링크(걸어야돼)
+                    디자인 상세 링크
                     <Image
                       src={"/img/more_link_b.png"}
                       alt="링크 이동"
@@ -160,7 +163,11 @@ export default function DevProject() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"https://www.livingart.co.kr/"} target="_blank" className="flex gap-4 items-center">
+                  <Link
+                    href={"https://www.livingart.co.kr/"}
+                    target="_blank"
+                    className="flex gap-4 items-center"
+                  >
                     <Image
                       src="/img/site_link.png"
                       alt="figma"
@@ -194,8 +201,10 @@ export default function DevProject() {
                 <strong>무지개동산</strong>
               </h3>
               <p className="text-lg leading-8">
-                방문하는 반려동물 장례 / 화장 서비스, 무지개동산<br />
-                <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인 소요기간 2~3일 | 퍼블리싱 4~5일
+                방문하는 반려동물 장례 / 화장 서비스, 무지개동산
+                <br />
+                <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인
+                소요기간 2~3일 | 퍼블리싱 4~5일
               </p>
               <ul className="flex gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
@@ -211,9 +220,7 @@ export default function DevProject() {
               <ul className="text-xl font-bold flex gap-10">
                 <li>
                   <Link
-                    href={
-                      ""
-                    }
+                    href={"/img/rainbow1.png"}
                     className="flex gap-4 items-center"
                     target="_blank"
                   >
@@ -223,7 +230,7 @@ export default function DevProject() {
                       width={24}
                       height={32}
                     />
-                    디자인 상세 링크(걸어야돼)
+                    디자인 상세 링크
                     <Image
                       src={"/img/more_link_b.png"}
                       alt="링크 이동"
@@ -233,7 +240,11 @@ export default function DevProject() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"http://md250515.interwise.co.kr/"} target="_blank" className="flex gap-4 items-center">
+                  <Link
+                    href={"http://md250515.interwise.co.kr/"}
+                    target="_blank"
+                    className="flex gap-4 items-center"
+                  >
                     <Image
                       src="/img/site_link.png"
                       alt="figma"
@@ -267,8 +278,10 @@ export default function DevProject() {
                 <strong>알싸한 홍어</strong>
               </h3>
               <p className="text-lg leading-8">
-                인천 홍어 전문 대표 브랜드, 알싸한 홍어<br />
-                <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인 소요기간 2~3일 | 퍼블리싱 7일
+                인천 홍어 전문 대표 브랜드, 알싸한 홍어
+                <br />
+                <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인
+                소요기간 2~3일 | 퍼블리싱 7일
               </p>
               <ul className="flex gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
@@ -284,9 +297,7 @@ export default function DevProject() {
               <ul className="text-xl font-bold flex gap-10">
                 <li>
                   <Link
-                    href={
-                      ""
-                    }
+                    href={"/img/alssahan1.png"}
                     className="flex gap-4 items-center"
                     target="_blank"
                   >
@@ -296,7 +307,7 @@ export default function DevProject() {
                       width={24}
                       height={32}
                     />
-                    디자인 상세 링크(걸어야돼)
+                    디자인 상세 링크
                     <Image
                       src={"/img/more_link_b.png"}
                       alt="링크 이동"
@@ -306,7 +317,11 @@ export default function DevProject() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"https://xn--ow4bp6b7il84cp8a.com/"} target="_blank" className="flex gap-4 items-center">
+                  <Link
+                    href={"https://xn--ow4bp6b7il84cp8a.com/"}
+                    target="_blank"
+                    className="flex gap-4 items-center"
+                  >
                     <Image
                       src="/img/site_link.png"
                       alt="figma"
@@ -340,8 +355,11 @@ export default function DevProject() {
                 <strong>세화엔스텍</strong>
               </h3>
               <p className="text-lg leading-8">
-                 폐수 수탁처리업, 환경플랜트사업 분야, 환경오염 방지시설업, 귀금속 재생사업 우수 업체 세화엔스텍<br />
-                <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인 소요기간 2~3일 | 퍼블리싱 10일
+                폐수 수탁처리업, 환경플랜트사업 분야, 환경오염 방지시설업,
+                귀금속 재생사업 우수 업체 세화엔스텍
+                <br />
+                <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인
+                소요기간 2~3일 | 퍼블리싱 10일
               </p>
               <ul className="flex gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
@@ -357,9 +375,7 @@ export default function DevProject() {
               <ul className="text-xl font-bold flex gap-10">
                 <li>
                   <Link
-                    href={
-                      ""
-                    }
+                    href={"/img/seahwa1.png"}
                     className="flex gap-4 items-center"
                     target="_blank"
                   >
@@ -369,7 +385,7 @@ export default function DevProject() {
                       width={24}
                       height={32}
                     />
-                    디자인 상세 링크(걸어야돼)
+                    디자인 상세 링크
                     <Image
                       src={"/img/more_link_b.png"}
                       alt="링크 이동"
@@ -379,7 +395,11 @@ export default function DevProject() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"https://sehwaetc.com/default/"} target="_blank" className="flex gap-4 items-center">
+                  <Link
+                    href={"https://sehwaetc.com/default/"}
+                    target="_blank"
+                    className="flex gap-4 items-center"
+                  >
                     <Image
                       src="/img/site_link.png"
                       alt="figma"

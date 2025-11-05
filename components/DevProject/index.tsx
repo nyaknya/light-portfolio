@@ -157,6 +157,27 @@ export default function DevProject() {
                 </li>
                 <li>
                   <Link
+                    href={"https://github.com/nyaknya/fitmon"}
+                    target="_blank"
+                    className="flex gap-4 items-center"
+                  >
+                    <Image
+                      src="/img/github.png"
+                      alt="figma"
+                      width={28}
+                      height={28}
+                    />
+                    깃허브 링크
+                    <Image
+                      src={"/img/more_link_b.png"}
+                      alt="링크 이동"
+                      width={14}
+                      height={14}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href={"https://fitmon-phi.vercel.app/"}
                     target="_blank"
                     className="flex gap-4 items-center"

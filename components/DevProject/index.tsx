@@ -509,7 +509,7 @@ export default function DevProject() {
           </li>
           <li
             ref={(el) => {
-              projectItemsRef.current[4] = el;
+              projectItemsRef.current[5] = el;
             }}
             className="p-4 py-8 lg:p-12 border-b flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-20"
           >

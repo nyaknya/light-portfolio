@@ -149,32 +149,33 @@ export default function IntroduceSection() {
   return (
     <section className="w-full py-20" id="introduce">
      <div className="w-full max-w-[1440px] m-auto px-5">
-        <h2 className="text-5xl font-bold mb-8">introduce Me</h2>
-        <div className="flex gap-10">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8">introduce Me</h2>
+        <div className="flex flex-col xl:flex-row gap-10">
           <div ref={imageRef}>
             <Image
               src="/img/introduce_profile.png"
               alt="프로필 이미지"
               width={290}
               height={290}
+               className="w-full sm:w-auto"
             />
           </div>
           <div>
-            <h3 ref={titleRef} className="text-4xl font-bold leading-12 dark:text-white">
-              포트폴리오를 클릭해주셔서 감사합니다. <br />
+            <h3 ref={titleRef} className="text-2xl sm:text-3xl xl:text-4xl font-bold sm:leading-12 dark:text-whit break-keep">
+              포트폴리오를 클릭해주셔서 감사합니다. <br className="hidden sm:block" />
               유연한 사고를 가진
               <strong className="bg-[#34CDE8] p-1 font-bold inline-block mx-2">
                 만능 엔터테이너
               </strong>
               심은주입니다!
             </h3>
-            <p ref={textRef} className="text-lg mt-6 leading-8 dark:text-white">
+            <p ref={textRef} className="text-base xl:text-lg mt-6 sm:leading-8 dark:text-white break-keep">
               지난 3년 간 웹 프로젝트를 경험하며 느낀 점은, 언제나 변수가 생길 것을 생각하여 유연하게 대응해야 한다는 것입니다.
-              <br /> 변화가 있어야 발전하는 것이라고 믿고 열심히 배우며 정진하고 있습니다. <br /> 저의 장점은
+              <br /> 변화가 있어야 발전하는 것이라고 믿고 열심히 배우며 정진하고 있습니다. <br /><br className="block sm:hidden" /> 저의 장점은
               <strong> 빠르게 적응하고, 능동적으로 소통하며, 업무의 맥락을 파악하는 능력</strong>
               입니다.
-              <br /> 코드란 보여지는 것. 즉 비주얼과 가장 멀어보이는데, 텍스트로 화면을 표현해낸다는 점에서 프론트엔드에 큰 흥미를 느낍니다.
-              <br /> 일에 있어서는 책임과 소통, 제안을 중요하게 생각합니다. 열린 마음으로 뭐든 시도하고 받아들며 디자인과 개발을 넘나들어 성장하겠습니다!
+              <br /><br className="block sm:hidden" /> 코드란 보여지는 것. 즉 비주얼과 가장 멀어보이는데, 텍스트로 화면을 표현해낸다는 점에서 프론트엔드에 큰 흥미를 느낍니다.
+              <br /><br className="block sm:hidden" /> 일에 있어서는 책임과 소통, 제안을 중요하게 생각합니다. 열린 마음으로 뭐든 시도하고 받아들며 디자인과 개발을 넘나들어 성장하겠습니다!
             </p>
           </div>
         </div>
@@ -184,8 +185,8 @@ export default function IntroduceSection() {
           </h3>
           <div className="grid grid-cols-12">
             {historyData.map((column, colIndex) => (
-              <div key={colIndex} className="col-span-4">
-                <ul className="pl-5 border-l-2 border-gray-300 h-full">
+              <div key={colIndex} className="col-span-12  lg:col-span-4">
+                <ul className="pt-4 xl:pt-0 pl-5 border-l-2 border-gray-300 h-full break-keep">
                   {column.map((item, itemIndex) => {
                     const globalIndex = historyData.slice(0, colIndex).flat().length + itemIndex;
                     return (
@@ -205,7 +206,7 @@ export default function IntroduceSection() {
                             </span>
                           )}
                         </h4>
-                        <p className="text-lg leading-8">
+                        <p className="text-base 2xl:text-lg leading-8">
                           {item.company && <strong className="block">{item.company}</strong>}
                           {item.description ? item.description.split('\n').map((line, i) => (
                             <span key={i}>

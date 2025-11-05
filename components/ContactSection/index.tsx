@@ -81,7 +81,7 @@ export default function ContactSection() {
     >
       <div className="w-full max-w-[1440px] h-[560px] m-auto flex flex-col justify-between items-center">
         <div className="flex justify-center w-full items-center">
-          <ul ref={skillsRef} className="flex self-center gap-5">
+          <ul ref={skillsRef} className="flex self-center gap-2 sm:gap-5">
             {skills.map(({ src, alt, isFill, width, height }) => (
               <SkillIcon
                 key={alt}
@@ -98,10 +98,10 @@ export default function ContactSection() {
         <div className="relative w-full">
           <FallText
             text="감사합니다!"
-            className="text-8xl font-medium text-center"
+            className="text-4xl lgtext-8xl font-medium text-center"
           />
           <span
-            className="font-sans text-[240px] font-bold absolute right-1/2 bottom-1/2 translate-1/2 -z-10 blur-sm w-full text-center"
+            className="font-sans text-8xl xl:text-[240px] font-bold absolute right-1/2 bottom-1/2 translate-1/2 -z-10 blur-sm w-full text-center"
             style={{ color: "var(--blur-bg)" }}
           >
             Thank you

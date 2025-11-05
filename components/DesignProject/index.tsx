@@ -101,19 +101,23 @@ export default function DesignProject() {
   return (
     <section className="w-full py-20">
       <div className="w-full max-w-[1440px] m-auto px-5">
-        <div className="flex justify-between items-center py-8 mb-4">
-          <h2 ref={titleRef} className="text-5xl font-bold">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center py-8 mb-4 gap-2 sm:gap-0">
+          <h2 ref={titleRef} className="text-3xl sm:text-5xl font-bold">
             Design Works
           </h2>
-          <p ref={subtitleRef} className="text-2xl font-bold flex gap-1">
+          <p
+            ref={subtitleRef}
+            className="text-lg sm:text-2xl font-bold flex gap-1"
+          >
             클릭해서 더 큰 이미지로 확인해보세요!
           </p>
         </div>
-        <ul className="flex gap-10 items-end">
+        <ul className="flex gap-2 flex-wrap items-end">
           <li
             ref={(el) => {
               detailItemsRef.current[0] = el;
             }}
+            className="w-full md:flex-1"
           >
             <Link href={"/img/detail_all.png"} target="_blank">
               <h3 className="text-2xl font-bold mb-3">상세페이지</h3>{" "}
@@ -122,6 +126,7 @@ export default function DesignProject() {
                 width={340}
                 height={620}
                 alt="상세페이지 예시1"
+                className="w-full"
               />
             </Link>
           </li>
@@ -129,6 +134,7 @@ export default function DesignProject() {
             ref={(el) => {
               detailItemsRef.current[1] = el;
             }}
+            className="w-full md:flex-1"
           >
             <Link href={"/img/detail_all.png"} target="_blank">
               <Image
@@ -136,6 +142,7 @@ export default function DesignProject() {
                 width={340}
                 height={620}
                 alt="상세페이지 예시2"
+                className="w-full"
               />
             </Link>
           </li>
@@ -143,6 +150,7 @@ export default function DesignProject() {
             ref={(el) => {
               detailItemsRef.current[2] = el;
             }}
+            className="w-full md:flex-1"
           >
             <Link href={"/img/sato_detail.png"} target="_blank">
               <h3 className="text-2xl font-bold mb-3">랜딩페이지</h3>{" "}
@@ -151,6 +159,7 @@ export default function DesignProject() {
                 width={340}
                 height={620}
                 alt="상세페이지 예시3"
+                className="w-full"
               />
             </Link>
           </li>
@@ -158,6 +167,7 @@ export default function DesignProject() {
             ref={(el) => {
               detailItemsRef.current[3] = el;
             }}
+            className="w-full md:flex-1"
           >
             <Link href={"/img/nulsol.jpg"} target="_blank">
               <Image
@@ -165,6 +175,7 @@ export default function DesignProject() {
                 width={340}
                 height={620}
                 alt="상세페이지 예시4"
+                className="w-full"
               />
             </Link>
           </li>
@@ -173,7 +184,7 @@ export default function DesignProject() {
         <h3 ref={otherTitleRef} className="pt-20 text-2xl mb-5 font-bold">
           PPT 등 이외 여러 디자인
         </h3>
-        <ul className="grid grid-cols-3 gap-5">
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <li
             ref={(el) => {
               otherItemsRef.current[0] = el;

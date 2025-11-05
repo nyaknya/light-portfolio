@@ -44,7 +44,7 @@ export default function Header({ isDark, onToggle }: HeaderProps) {
         }}
         aria-hidden
       />
-      <div className="w-[1440px] m-auto py-3 flex justify-between items-center">
+      <div className="w-full max-w-[1440px] m-auto py-3 flex justify-between items-center">
         <div className="flex gap-2.5 items-center">
           <h1>
             <Link href="/">
@@ -58,7 +58,7 @@ export default function Header({ isDark, onToggle }: HeaderProps) {
           </h1>
         </div>
         <nav>
-          <ul className="flex items-center gap-10 dark:text-white">
+          <ul className="flex items-center gap-5 sm:gap-10 dark:text-white">
             <li className="mt-2">
               <Toggle isOn={isDark} onChange={onToggle} />
             </li>

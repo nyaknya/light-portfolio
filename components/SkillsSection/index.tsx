@@ -112,15 +112,19 @@ export default function SkillsSection() {
 
   return (
     <section className="w-full py-20">
-     <div className="w-full max-w-[1440px] m-auto px-5">
+      <div className="w-full max-w-[1440px] m-auto px-5">
         <h3 ref={frontendTitleRef} className="font-bold text-3xl mb-6">
           Prontend Skills
         </h3>
-        <div className="flex justify-between gap-10">
-          <div ref={(el) => { skillCardsRef.current[0] = el; }}>
+        <div className="flex flex-col xl:flex-row  justify-between gap-10">
+          <div
+            ref={(el) => {
+              skillCardsRef.current[0] = el;
+            }}
+          >
             <h4 className="text-2xl font-bold mb-4">자주 사용해봤어요</h4>
             <ul className="grid grid-cols-4 gap-5">
-              <li className="col-span-2 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-2  flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/next-icon.png"
@@ -131,7 +135,7 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">Next.JS</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-2 flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/js-icon.png"
@@ -142,7 +146,7 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">JavaScript</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-2  flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/react-icon.png"
@@ -153,7 +157,7 @@ export default function SkillsSection() {
                 </figure>
                 <span className="text-xl font-semibold">React</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-2  flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/ts-icon.png"
@@ -166,10 +170,14 @@ export default function SkillsSection() {
               </li>
             </ul>
           </div>
-          <div ref={(el) => { skillCardsRef.current[1] = el; }}>
+          <div
+            ref={(el) => {
+              skillCardsRef.current[1] = el;
+            }}
+          >
             <h4 className="text-2xl font-bold mb-4">사용해본 경험이 있어요</h4>
             <ul className="grid grid-cols-4 gap-5">
-              <li className="col-span-2 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-2 flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex overflow-hidden">
                   <Image
                     src="/img/stylecomponent-icon.png"
@@ -199,7 +207,7 @@ export default function SkillsSection() {
                   <br /> Libraries
                 </span>
               </li>
-              <li className="col-span-1 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-1 flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/axios-icon.png"
@@ -210,7 +218,7 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">Axios</span>
               </li>
-              <li className="col-span-1 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-1 flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/jest-icon.png"
@@ -221,7 +229,7 @@ export default function SkillsSection() {
                 </figure>{" "}
                 <span className="text-xl font-semibold">Jest</span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-2 flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/reactquery-icon.png"
@@ -236,7 +244,7 @@ export default function SkillsSection() {
                   (React Query)
                 </span>
               </li>
-              <li className="col-span-2 flex items-center gap-5">
+              <li className="col-span-4 sm:col-span-2 flex items-center gap-5">
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
                     src="/img/reduxtoolkit-icon.png"
@@ -249,7 +257,11 @@ export default function SkillsSection() {
               </li>
             </ul>
           </div>
-          <div ref={(el) => { skillCardsRef.current[2] = el; }}>
+          <div
+            ref={(el) => {
+              skillCardsRef.current[2] = el;
+            }}
+          >
             <h4 className="text-2xl font-bold mb-4">앞으로 배워보고 싶어요</h4>
             <ul className="grid grid-cols-2 gap-5">
               <li className="col-span-3 flex items-center gap-5">
@@ -278,14 +290,16 @@ export default function SkillsSection() {
           </div>
         </div>
         <div className="grid grid-cols-12 mt-12">
-          <div className="col-span-6">
+          <div className="col-span-12 xl:col-span-6 pb-8 xl:pb-0">
             <h3 ref={designTitleRef} className="font-bold text-3xl mb-6">
               Design Skills
             </h3>
             <ul className="grid grid-cols-6 gap-5">
               <li
-                ref={(el) => { designItemsRef.current[0] = el; }}
-                className="col-span-2 flex items-center gap-5"
+                ref={(el) => {
+                  designItemsRef.current[0] = el;
+                }}
+                className="col-span-6 sm:col-span-2 flex items-center gap-5"
               >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
@@ -298,8 +312,10 @@ export default function SkillsSection() {
                 <span className="text-xl font-semibold">PhotoShop</span>
               </li>
               <li
-                ref={(el) => { designItemsRef.current[1] = el; }}
-                className="col-span-2 flex items-center gap-5"
+                ref={(el) => {
+                  designItemsRef.current[1] = el;
+                }}
+                className="col-span-6 sm:col-span-2 flex items-center gap-5"
               >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
@@ -312,8 +328,10 @@ export default function SkillsSection() {
                 <span className="text-xl font-semibold">Illustrator</span>
               </li>
               <li
-                ref={(el) => { designItemsRef.current[2] = el; }}
-                className="col-span-2 flex items-center gap-5"
+                ref={(el) => {
+                  designItemsRef.current[2] = el;
+                }}
+                className="col-span-6 sm:col-span-2 flex items-center gap-5"
               >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
@@ -327,14 +345,16 @@ export default function SkillsSection() {
               </li>
             </ul>
           </div>
-          <div className="col-span-6">
+          <div className="col-span-12 xl:col-span-6">
             <h3 ref={anotherTitleRef} className="font-bold text-3xl mb-6">
               Another Skills
             </h3>
             <ul className="grid grid-cols-6 gap-5">
               <li
-                ref={(el) => { anotherItemsRef.current[0] = el; }}
-                className="col-span-2 flex items-center gap-5"
+                ref={(el) => {
+                  anotherItemsRef.current[0] = el;
+                }}
+                className="col-span-6 sm:col-span-2 flex items-center gap-5"
               >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
@@ -347,8 +367,10 @@ export default function SkillsSection() {
                 <span className="text-xl font-semibold">Notion</span>
               </li>
               <li
-                ref={(el) => { anotherItemsRef.current[1] = el; }}
-                className="col-span-2 flex items-center gap-5"
+                ref={(el) => {
+                  anotherItemsRef.current[1] = el;
+                }}
+                className="col-span-6 sm:col-span-2 flex items-center gap-5"
               >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image
@@ -361,8 +383,10 @@ export default function SkillsSection() {
                 <span className="text-xl font-semibold">Excel</span>
               </li>
               <li
-                ref={(el) => { anotherItemsRef.current[2] = el; }}
-                className="col-span-2 flex items-center gap-5"
+                ref={(el) => {
+                  anotherItemsRef.current[2] = el;
+                }}
+                className="col-span-6 sm:col-span-2 flex items-center gap-5"
               >
                 <figure className="rounded-4xl border border-gray-300 size-16 justify-center items-center flex">
                   <Image

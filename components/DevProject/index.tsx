@@ -63,12 +63,12 @@ export default function DevProject() {
   return (
     <section className="w-full py-20" id="project">
       <div className="w-full max-w-[1440px] m-auto px-5">
-        <div className="flex justify-between items-center py-8">
-          <h2 ref={titleRef} className="text-5xl font-bold">
+        <div className="flex flex-col js lg:flex-row lg:justify-between lg:items-center py-8 gap-5">
+          <h2 ref={titleRef} className="text-4xl sm:text-5xl font-bold">
             Dev Projects
           </h2>
-          <p ref={subtitleRef} className="text-2xl font-bold flex gap-1">
-            지난 3년간 100개 이상의 프로젝트를 제작했습니다.{" "}
+          <p ref={subtitleRef} className="text-base sm:text-2xl font-bold flex flex-col lg:flex-row  gap-2 lg:gap-1">
+            지난 3년간 100개 이상의<br className="block sm:hidden" /> 프로젝트를 제작했습니다.{" "}
             <Link
               href={
                 "https://diamond-nerve-9e2.notion.site/44dc3f3a136a463e9a9152f4577c15e9?source=copy_link"
@@ -92,7 +92,7 @@ export default function DevProject() {
             ref={(el) => {
               projectItemsRef.current[0] = el;
             }}
-            className="p-12 border-b flex items-center gap-20"
+            className="p-4 py-8 lg:p-12 border-b flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-20"
           >
             <figure>
               <Image
@@ -103,17 +103,17 @@ export default function DevProject() {
               />
             </figure>
             <div className="flex-col flex gap-6">
-              <h3 className="text-4xl items-center flex gap-6">
+              <h3 className="text-3xl sm:text-4xl items-center flex gap-4 sm:gap-6">
                 <span className="text-2xl font-bold">01</span>{" "}
                 <strong>FITMON</strong>
               </h3>
-              <p className="text-lg leading-8">
+              <p className="text-base sm:text-lg leading-8">
                 함께 챌린지를 달성하며 지속 가능한 운동을 도모하는 모임 플랫폼
                 <br />
                 <strong>팀프로젝트 (FE, 팀장)</strong> | FE 4인, BE 1인 | 디자인
                 100% FE 25%
               </p>
-              <ul className="flex gap-2">
+              <ul className="flex flex-wrap gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
                   Next.js
                 </li>
@@ -127,7 +127,7 @@ export default function DevProject() {
                   Zustand
                 </li>
               </ul>
-              <ul className="text-xl font-bold flex gap-10">
+              <ul className="text-xl font-bold flex flex-col sm:flex-row gap-6 sm:gap-10">
                 <li>
                   <Link
                     href={
@@ -179,7 +179,7 @@ export default function DevProject() {
             ref={(el) => {
               projectItemsRef.current[1] = el;
             }}
-            className="p-12 border-b flex items-center gap-20"
+            className="p-4 py-8 lg:p-12 border-b flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-20"
           >
             <figure>
               <Image
@@ -190,16 +190,16 @@ export default function DevProject() {
               />
             </figure>
             <div className="flex-col flex gap-6">
-              <h3 className="text-4xl items-center flex gap-6">
+              <h3 className="text-3xl sm:text-4xl items-center flex gap-4 sm:gap-6">
                 <span className="text-2xl font-bold">02</span>
                 <strong>리빙아트</strong>
               </h3>
-              <p className="text-lg leading-8">
+              <p className="text-base sm:text-lg leading-8">
                 스테인레스 주방용품 전문생산기업 리빙아트
                 <br />
                 <strong>디자인 기여도 100%</strong> | 디자인 소요기간 1~2일
               </p>
-              <ul className="flex gap-2">
+              <ul className="flex flex-wrap gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
                   Wordpress
                 </li>
@@ -210,7 +210,7 @@ export default function DevProject() {
                   PHOTOSHOP
                 </li>
               </ul>
-              <ul className="text-xl font-bold flex gap-10">
+              <ul className="text-xl font-bold flex flex-col sm:flex-row gap-6 sm:gap-10">
                 <li>
                   <Link
                     href={"/img/livingart1.png"}
@@ -260,7 +260,7 @@ export default function DevProject() {
             ref={(el) => {
               projectItemsRef.current[2] = el;
             }}
-            className="p-12 border-b flex items-center gap-20"
+            className="p-4 py-8 lg:p-12 border-b flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-20"
           >
             <figure>
               <Image
@@ -271,17 +271,17 @@ export default function DevProject() {
               />
             </figure>
             <div className="flex-col flex gap-6">
-              <h3 className="text-4xl items-center flex gap-6">
+              <h3 className="text-3xl sm:text-4xl items-center flex gap-4 sm:gap-6">
                 <span className="text-2xl font-bold">03</span>
                 <strong>무지개동산</strong>
               </h3>
-              <p className="text-lg leading-8">
+              <p className="text-base sm:text-lg leading-8">
                 방문하는 반려동물 장례 / 화장 서비스, 무지개동산
                 <br />
                 <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인
                 소요기간 2~3일 | 퍼블리싱 4~5일
               </p>
-              <ul className="flex gap-2">
+              <ul className="flex flex-wrap gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
                   그누보드
                 </li>
@@ -292,7 +292,7 @@ export default function DevProject() {
                   PHOTOSHOP
                 </li>
               </ul>
-              <ul className="text-xl font-bold flex gap-10">
+              <ul className="text-xl font-bold flex flex-col sm:flex-row gap-6 sm:gap-10">
                 <li>
                   <Link
                     href={"/img/rainbow1.png"}
@@ -342,7 +342,7 @@ export default function DevProject() {
             ref={(el) => {
               projectItemsRef.current[3] = el;
             }}
-            className="p-12 border-b flex items-center gap-20"
+            className="p-4 py-8 lg:p-12 border-b flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-20"
           >
             <figure>
               <Image
@@ -353,17 +353,17 @@ export default function DevProject() {
               />
             </figure>
             <div className="flex-col flex gap-6">
-              <h3 className="text-4xl items-center flex gap-6">
+              <h3 className="text-3xl sm:text-4xl items-center flex gap-4 sm:gap-6">
                 <span className="text-2xl font-bold">04</span>
                 <strong>알싸한 홍어</strong>
               </h3>
-              <p className="text-lg leading-8">
+              <p className="text-base sm:text-lg leading-8">
                 인천 홍어 전문 대표 브랜드, 알싸한 홍어
                 <br />
                 <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인
                 소요기간 2~3일 | 퍼블리싱 7일
               </p>
-              <ul className="flex gap-2">
+              <ul className="flex flex-wrap gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
                   카페24 쇼핑몰 커스텀
                 </li>
@@ -374,7 +374,7 @@ export default function DevProject() {
                   PHOTOSHOP
                 </li>
               </ul>
-              <ul className="text-xl font-bold flex gap-10">
+               <ul className="text-xl font-bold flex flex-col sm:flex-row gap-6 sm:gap-10">
                 <li>
                   <Link
                     href={"/img/alssahan1.png"}
@@ -424,7 +424,7 @@ export default function DevProject() {
             ref={(el) => {
               projectItemsRef.current[4] = el;
             }}
-            className="p-12 border-b flex items-center gap-20"
+               className="p-4 py-8 lg:p-12 border-b flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-20"
           >
             <figure>
               <Image
@@ -435,18 +435,18 @@ export default function DevProject() {
               />
             </figure>
             <div className="flex-col flex gap-6">
-              <h3 className="text-4xl items-center flex gap-6">
+              <h3 className="text-3xl sm:text-4xl items-center flex gap-4 sm:gap-6">
                 <span className="text-2xl font-bold">05</span>
                 <strong>세화엔스텍</strong>
               </h3>
-              <p className="text-lg leading-8">
+              <p className="text-base sm:text-lg leading-8">
                 폐수 수탁처리업, 환경플랜트사업 분야, 환경오염 방지시설업,
                 귀금속 재생사업 우수 업체 세화엔스텍
                 <br />
                 <strong>디자인 및 퍼블리싱 기여도 100%</strong> | 디자인
                 소요기간 2~3일 | 퍼블리싱 10일
               </p>
-              <ul className="flex gap-2">
+              <ul className="flex flex-wrap gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
                   하드코딩
                 </li>
@@ -457,7 +457,7 @@ export default function DevProject() {
                   PHOTOSHOP
                 </li>
               </ul>
-              <ul className="text-xl font-bold flex gap-10">
+              <ul className="text-xl font-bold flex flex-col sm:flex-row gap-6 sm:gap-10">
                 <li>
                   <Link
                     href={"/img/seahwa1.png"}

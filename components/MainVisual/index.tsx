@@ -82,9 +82,9 @@ export default function MainVisual({ isOn, toggleDark }: MainVisualProps) {
   const skillsRef = useRef<HTMLUListElement>(null);
 
   return (
-    <section className="w-full h-screen flex justify-center items-center">
-      <div className="w-full max-w-[1440px] h-[680px] m-auto flex flex-col justify-between items-center px-5">
-        <div className="flex justify-between items-center w-full">
+    <section className="w-full h-[760px] md:h-screen flex justify-center items-center">
+      <div className="w-full max-w-[1440px] h-[540px] xl:h-[680px] m-auto flex flex-col justify-between items-center px-5">
+        <div className="flex flex-col md:flex-row gap-5 justify-between items-center w-full">
           <Image
             src={isOn ? "/img/logo-dark.png" : "/img/logo.png"}
             width={70}
@@ -92,24 +92,24 @@ export default function MainVisual({ isOn, toggleDark }: MainVisualProps) {
             alt="로고"
           />
           <TypeText text="만나서 반갑습니다!" className="text-xl font-medium" />
-          <span className="text-xl font-medium dark:text-white">
+          <span className="text-xl font-medium dark:text-white hidden md:block">
             Sim Eun ju
           </span>
         </div>
         <div className="relative">
-          <FallText text="Portfolio" className="text-8xl font-medium italic" />
+          <FallText text="Portfolio" className="text-6xl md:text-8xl font-medium italic" />
           <span
-            className="font-sans text-[240px] font-bold absolute right-1/2 bottom-1/2 translate-1/2 -z-10 blur-sm"
+            className="font-sans text-9xl  xl:text-[240px] font-bold absolute right-1/2 bottom-1/2 translate-1/2 -z-10 blur-sm"
             style={{ color: "var(--blur-bg)" }}
           >
             2025
           </span>
         </div>
-        <div className="flex justify-between w-full items-center">
-          <div className="w-50">
+        <div className="flex xl:justify-between w-full items-center justify-center">
+          <div className="w-50 hidden xl:block">
             <Toggle isOn={isOn} onChange={toggleDark} />
           </div>
-          <ul ref={skillsRef} className="flex self-center gap-5">
+          <ul ref={skillsRef} className="flex self-center gap-2.5 xl:gap-5">
             {skills.map(({ src, alt, isFill, width, height }) => (
               <SkillIcon
                 key={alt}
@@ -121,7 +121,7 @@ export default function MainVisual({ isOn, toggleDark }: MainVisualProps) {
               />
             ))}
           </ul>
-          <span className="w-50 text-right dark:text-white">
+          <span className="w-50 text-right dark:text-white hidden xl:block">
             sim784442@gmail.com
           </span>
         </div>

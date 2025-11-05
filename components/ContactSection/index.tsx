@@ -107,7 +107,7 @@ export default function ContactSection() {
             Thank you
           </span>
         </div>
-        <div className="flex justify-center items-start gap-4 w-full text-lg">
+        <div className="flex justify-center items-start gap-4 w-full text-lg p-4">
           <strong>CONTACT</strong>
           <div>
             010-8582-0835 / sim784442@gmail.com

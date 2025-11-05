@@ -120,20 +120,24 @@ export default function DevProject() {
               <p className="text-sm">
                 [ localStorage 기반 입력 데이터 자동 저장 기능 구현 ]<br />
                 단계별로 이동하며 데이터를 입력하는 폼 UI에서, 이전 단계로
-                돌아가도 입력값이 유지되길 바라는 사용자 피드백 발생<br/>
+                돌아가도 입력값이 유지되길 바라는 사용자 피드백 발생
+                <br />
                 입력 데이터를 localStorage에 저장하고 단계 전환 시 자동 불러오는
-                구조로 구현<br/> 사용자 입력 데이터 손실을 방지하고, 폼 작성 경험
-                개선에 기여
+                구조로 구현
+                <br /> 사용자 입력 데이터 손실을 방지하고, 폼 작성 경험 개선에
+                기여
               </p>
-            <p className="text-sm">
+              <p className="text-sm">
                 [ SSR 적용을 통한 초기 렌더링 성능 향상 ]<br />
                 홈(리스트) 화면 특성상 데이터가 자주 갱신되지 않는 점을 고려해,
-                사용자 초기 진입 시 성능을 개선하고자 SSR 도입 결정<br/>
+                사용자 초기 진입 시 성능을 개선하고자 SSR 도입 결정
+                <br />
                 React Query의 프리패치 및 하이드레이션 기능을 활용해 서버 측에서
-                데이터를 선반영<br/> 첫 화면 로딩 속도를 약 30% 개선하여 사용자 초기
-                경험 향상에 기여
+                데이터를 선반영
+                <br /> 첫 화면 로딩 속도를 약 30% 개선하여 사용자 초기 경험
+                향상에 기여
               </p>
-                   <p className="text-sm">
+              <p className="text-sm">
                 [ 프로젝트 목표 설정 및 일정 관리 문화 조성 ]<br />
                 팀장 역할을 맡아 주 단위 목표 설정 및 매일 아침 팀원들과의 진행
                 상황 공유 루틴 도입
@@ -142,7 +146,8 @@ export default function DevProject() {
                 재조정
                 <br />
                 팀원 모두가 서로의 작업 상황을 명확히 인지하고 빠르게 대응할 수
-                있는 환경을 조성해<br/> 프로젝트를 기한 내 안정적으로 완수
+                있는 환경을 조성해
+                <br /> 프로젝트를 기한 내 안정적으로 완수
               </p>
               <ul className="flex flex-wrap gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
@@ -174,6 +179,27 @@ export default function DevProject() {
                       height={30}
                     />
                     Figma 시안 링크
+                    <Image
+                      src={"/img/more_link_b.png"}
+                      alt="링크 이동"
+                      width={14}
+                      height={14}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"https://github.com/nyaknya/fitmon"}
+                    target="_blank"
+                    className="flex gap-4 items-center"
+                  >
+                    <Image
+                      src="/img/github.png"
+                      alt="figma"
+                      width={28}
+                      height={28}
+                    />
+                    깃허브 링크
                     <Image
                       src={"/img/more_link_b.png"}
                       alt="링크 이동"
@@ -227,8 +253,6 @@ export default function DevProject() {
               </h3>
               <p className="text-base sm:text-lg leading-8">
                 스테인레스 주방용품 전문생산기업 리빙아트
-                <br />
-                <strong>디자인 기여도 100%</strong> | 디자인 소요기간 1~2일
               </p>
               <ul className="flex flex-wrap gap-2">
                 <li className="px-5 py-2 rounded-3xl border border-gray-300 bg-black text-white font-semibold">
